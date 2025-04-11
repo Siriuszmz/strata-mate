@@ -16,6 +16,12 @@ export default function Home() {
       </nav>
 
       {/* 欢迎语 */}
+<img
+  src="/building.jpg"
+  alt="Modern apartment complex"
+  className="w-full max-w-md rounded-lg shadow-lg mb-8"
+/>
+
       <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
         Welcome to StrataMate Portal
       </h2>
