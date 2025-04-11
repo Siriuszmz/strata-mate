@@ -16,18 +16,19 @@ export default function Home() {
       </nav>
 
       {/* 欢迎语 */}
+
+     <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
+        Welcome to StrataMate Portal
+      </h2>
+      <p className="text-lg text-gray-700 text-center max-w-2xl mb-8">
+        Helping owners and committees manage their apartment buildings through clear communication, secure documentation, and streamlined feedback.
+      </p>
 <img
   src="/building.jpg"
   alt="Modern apartment complex"
   className="w-full max-w-md rounded-lg shadow-lg mb-8"
 />
 
-      <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
-        Welcome to StrataMate Portal
-      </h2>
-      <p className="text-lg text-gray-700 text-center max-w-2xl mb-8">
-        Helping owners and committees manage their apartment buildings through clear communication, secure documentation, and streamlined feedback.
-      </p>
 
       {/* 五个跳转按钮 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-3xl text-center">
