@@ -1,4 +1,6 @@
-import Link from 'next/link';
+'use client'
+
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -16,21 +18,20 @@ export default function Home() {
       </nav>
 
       {/* 欢迎语 */}
-
-     <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
+      <h2 className="text-4xl font-bold text-center text-blue-600 mb-6">
         Welcome to StrataMate Portal
       </h2>
       <p className="text-lg text-gray-700 text-center max-w-2xl mb-8">
         Helping owners and committees manage their apartment buildings through clear communication, secure documentation, and streamlined feedback.
       </p>
-<img
-  src="/building.jpg"
-  alt="Modern apartment complex"
-  className="w-full max-w-md rounded-lg shadow-lg mb-8"
-/>
 
+      <img
+        src="/building.jpg"
+        alt="Modern apartment complex"
+        className="w-full max-w-md rounded-lg shadow-lg mb-8"
+      />
 
-      {/* 五个跳转按钮 */}
+      {/* 原五个跳转按钮 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-3xl text-center">
         <Link href="/about" className="bg-white border p-4 rounded-lg shadow hover:shadow-lg transition">
           <h3 className="text-blue-600 font-semibold mb-2">🏢 About</h3>
@@ -53,7 +54,30 @@ export default function Home() {
           <p className="text-gray-600 text-sm">Submit your thoughts and comments securely.</p>
         </Link>
       </div>
-    </main>
-  );
-}
 
+      {/* 三个 Supabase 功能页按钮 */}
+      <div className="mt-12 space-x-4 text-center">
+        <Link href="/owners">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            View Owners
+          </button>
+        </Link>
+        <Link href="/maintenance">
+          <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+            Submit Maintenance
+          </button>
+        </Link>
+        <Link href="/budget">
+          <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+            View Budget
+          </button>
+        </Link>
+      </div>
+
+      {/* 环境变量展示（可选） */}
+      <p className="text-sm text-gray-500 mt-6">
+        Env Var: {process.env.NEXT_PUBLIC_SITE_NAME}
+      </p>
+    </main>
+  )
+}
